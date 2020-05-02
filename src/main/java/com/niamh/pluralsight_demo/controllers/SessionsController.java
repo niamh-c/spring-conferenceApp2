@@ -34,7 +34,7 @@ public class SessionsController {
         return sessionRepository.saveAndFlush(session);
     }
 
-    @RequestMapping(value = "{id", method = RequestMethod.DELETE)
+    @RequestMapping(value = "{id}", method = RequestMethod.DELETE)
     public void delete(@PathVariable Long id) {
         //TODO Also need to check for children records before deleting
         //i.e dealing with cascades
