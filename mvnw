@@ -34,6 +34,7 @@
 #   MAVEN_SKIP_RC - flag to disable loading of mavenrc files
 # ----------------------------------------------------------------------------
 
+
 if [ -z "$MAVEN_SKIP_RC" ]; then
 
   if [ -f /etc/mavenrc ]; then
@@ -137,11 +138,13 @@ if [ -z "$JAVA_HOME" ]; then
       fi
       javaHome="$(dirname \"$javaExecutable\")"
       javaHome=$(expr "$javaHome" : '\(.*\)/bin')
+
       JAVA_HOME="$javaHome"
       export JAVA_HOME
     fi
   fi
 fi
+
 
 if [ -z "$JAVACMD" ]; then
   if [ -n "$JAVA_HOME" ]; then
@@ -162,6 +165,7 @@ if [ ! -x "$JAVACMD" ]; then
   exit 1
 fi
 
+<<<<<<< HEAD
 if [ -z "$JAVA_HOME" ]; then
   echo "Warning: JAVA_HOME environment variable is not set."
 fi
@@ -179,6 +183,7 @@ find_maven_basedir() {
 
   basedir="$1"
   wdir="$1"
+
   while [ "$wdir" != '/' ]; do
     if [ -d "$wdir"/.mvn ]; then
       basedir=$wdir
@@ -285,6 +290,7 @@ else
       fi
     fi
   fi
+
 fi
 ##########################################################################################
 # End of extension
