@@ -11,6 +11,7 @@ import javax.sql.DataSource;
 public class PersistenceConfiguration {
     @Bean
     public DataSource dataSource(){
+        //will need to be commented out if deploying on webserver where db is a service
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setUrl(System.getenv("DB_URL"));
         dataSource.setUsername(System.getenv("DB_USERNAME"));

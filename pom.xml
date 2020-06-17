@@ -14,6 +14,9 @@
     <name>conference-demo</name>
     <description>Demo project for Spring Boot</description>
 
+<!--    for a war file instead of a jar file-->
+<!--    <packaging>war</packaging>-->
+
     <properties>
         <java.version>11</java.version>
     </properties>
@@ -35,6 +38,19 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jetty</artifactId>
         </dependency>
+
+<!--        If you want to create a war file use the below dependency instead of the above-->
+<!--        which says that the container will be provided-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-web</artifactId>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-tomcat</artifactId>-->
+<!--            <scope>provided</scope>-->
+<!--        </dependency>-->
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -83,6 +99,10 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <!--makes the package execuatable using ./ like bash script-->
+                    <executable>true</executable>
+                </configuration>
             </plugin>
         </plugins>
     </build>
